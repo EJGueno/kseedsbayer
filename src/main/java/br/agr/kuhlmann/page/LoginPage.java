@@ -16,8 +16,4 @@ public class LoginPage extends BasePage{
 		dsl.clicaButton("loginBtn");
 		
 	}
-
 }
-
-
-//help-block

@@ -3,6 +3,7 @@ package br.agr.kuhlmann.core;
 import static br.agr.kuhlmann.core.DriverFactory.getDriver;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 public class DSL {
 
@@ -18,5 +19,10 @@ public class DSL {
 	
 	public void clicaButton(String id) {
 		getDriver().findElement(By.id(id)).click();
+	}
+
+	public void clicaVisibleText(String linkText) {
+		WebElement link = getDriver().findElement(By.linkText(linkText));
+		link.click();
 	}
 }
